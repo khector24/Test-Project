@@ -52,8 +52,8 @@
         <TableView fx:id="faqTable" prefHeight="322.0" prefWidth="600.0">
             <columns>
                 <TableColumn fx:id="idCol" prefWidth="48.0" text="ID" />
-                <TableColumn fx:id="questionCol" prefWidth="163.0" text="QUESTION" />
-                <TableColumn fx:id="answerCol" prefWidth="388.0" text="ANSWER" />
+                <TableColumn fx:id="questionCol" prefWidth="150.13577270507812" text="QUESTION" />
+                <TableColumn fx:id="answerCol" prefWidth="382.0" text="ANSWER" />
             </columns>
         </TableView>
     </HBox>

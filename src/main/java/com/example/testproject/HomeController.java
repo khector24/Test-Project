@@ -111,6 +111,7 @@ public class HomeController implements Initializable {
         }
 
         clear(); // Clear the input fields after adding the FAQ
+        loadDataIntoFAQTable(); // Refresh the tableview
     }
 
     @FXML
