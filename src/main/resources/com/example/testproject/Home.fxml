@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" style="-fx-padding: 8px; -fx-spacing: 4px;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testproject.HomeController">
+    <HBox alignment="CENTER" prefHeight="44.0" prefWidth="584.0">
+        <Label alignment="TOP_LEFT" prefHeight="39.0" prefWidth="429.0" text="Test Database">
+            <font>
+                <Font size="32.0" />
+            </font>
+        </Label>
+      <Label fx:id="notificationLbl" alignment="CENTER" prefHeight="17.0" prefWidth="406.0" text="Label" />
+    </HBox>
+    <HBox prefHeight="335.0" prefWidth="884.0" style="-fx-spacing: 6px;">
+        <VBox prefHeight="100.0" prefWidth="285.0" style="-fx-padding: 5px; -fx-spacing: 5px;">
+            <HBox prefHeight="35.0" prefWidth="272.0" style="-fx-spacing: 3px;">
+                <Label prefHeight="26.0" prefWidth="129.0" text="Add Information">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <Button fx:id="refreshBtn" mnemonicParsing="false" onAction="#refreshBtnOnAction" prefHeight="26.0" prefWidth="79.0" text="REFRESH" />
+            <Button fx:id="selectBtn" layoutX="205.0" layoutY="10.0" mnemonicParsing="false" onAction="#selectBtnOnAction" prefHeight="37.0" prefWidth="77.0" text="SELECT" />
+            </HBox>
+            <HBox layoutX="15.0" layoutY="52.0" prefHeight="36.0" prefWidth="272.0" style="-fx-spacing: 4px;">
+                <Label prefHeight="17.0" prefWidth="70.0" text="ID:" />
+                <TextField fx:id="idTfld" prefHeight="26.0" prefWidth="225.0" />
+            </HBox>
+            <HBox prefHeight="36.0" prefWidth="272.0" style="-fx-spacing: 4px;">
+                <Label prefHeight="17.0" prefWidth="70.0" text="Question:" />
+                <TextField fx:id="questionTfld" prefHeight="26.0" prefWidth="225.0" />
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="177.0" prefWidth="272.0" style="-fx-spacing: 4px;">
+                <Label prefHeight="17.0" prefWidth="70.0" text="Answer:" />
+                <TextArea fx:id="answerTextArea" prefHeight="100.0" prefWidth="231.0" />
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="74.0" prefWidth="584.0" style="-fx-spacing: 6px;">
+                <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnOnAction" text="ADD" />
+                <Button fx:id="updateBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateBtnOnAction" text="UPDATE" />
+                <Button fx:id="deleteBtn" layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteBtnOnAction" text="DELETE" />
+                <Button fx:id="clearBtn" layoutX="117.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearBtnOnAction" text="CLEAR" />
+            </HBox>
+        </VBox>
+        <TableView fx:id="faqTable" prefHeight="322.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="48.0" text="ID" />
+                <TableColumn fx:id="questionCol" prefWidth="163.0" text="QUESTION" />
+                <TableColumn fx:id="answerCol" prefWidth="388.0" text="ANSWER" />
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>
